@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaTeX & BibTeX Tools - Figure Organizer & Reference Formatter for macOS</title>
+    <meta name="description" content="Automatically rename figures and format BibTeX references for journal submission. 100% offline and private.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LaTeX & BibTeX Tools for macOS">
+    <meta name="twitter:description" content="Automate tedious LaTeX tasks. Batch-rename figures, format references.">
+    <meta name="twitter:image" content="./app-preview.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(to right, #7c3aed, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <nav class="w-full py-6 px-6 max-w-6xl mx-auto flex justify-between items-center">
+        <div class="text-2xl font-bold tracking-tighter">LaTeX Tools</div>
+        <a href="https://cnrs-oguzumut.github.io/scientific-profile/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition">by Oguz Umut Salman</a>
+    </nav>
+
+    <header class="max-w-4xl mx-auto px-6 py-20 text-center">
+        <div class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-purple-600 uppercase bg-purple-100 rounded-full">
+            v1.0 for macOS (Universal)
+        </div>
+        <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+            Submit Papers, <span class="gradient-text">Not Headaches.</span>
+        </h1>
+        <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+            Journals require figures named Fig1, Fig2... but your manuscript has <code class="bg-gray-200 px-1 rounded">plot_final_v3_NEW.pdf</code>. 
+            This app scans your LaTeX and batch-renames everything automatically.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <a href="https://ko-fi.com/s/3ccc0c085c" class="px-8 py-4 bg-gray-900 text-white font-bold rounded-xl text-lg hover:bg-gray-800 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                Download for Free
+            </a>
+            <a href="#features" class="px-8 py-4 bg-white text-gray-900 border border-gray-200 font-bold rounded-xl text-lg hover:bg-gray-50 transition">
+                See Features
+            </a>
+        </div>
+        <p class="mt-4 text-sm text-gray-500">Requires macOS 11.0+ • Intel & Apple Silicon</p>
+    </header>
+
+    <div class="max-w-5xl mx-auto px-6 mb-24">
+        <div class="relative rounded-2xl shadow-2xl overflow-hidden border border-gray-200 bg-gray-900 aspect-video flex items-center justify-center group">
+            <img src="./app-preview.png" 
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" 
+                 class="w-full h-full object-cover" 
+                 alt="LaTeX & BibTeX Tools App Screenshot">
+            
+            <div style="display:none;" class="text-center p-10">
+                <p class="text-gray-400 text-xl">📸 Image not found</p>
+                <p class="text-gray-500 text-sm mt-2">Please upload 'app-preview.png' to your GitHub repo.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="bg-white py-20 border-t border-gray-200">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4">The Problem</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                During months of writing, figures accumulate with arbitrary names. At submission time, journals demand sequential naming — and you're stuck manually renaming 30 files and updating every path in your .tex file.
+            </p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-red-50 border border-red-200 rounded-xl p-6">
+                    <h3 class="font-bold text-red-800 mb-3">❌ Your Figures Folder</h3>
+                    <div class="font-mono text-sm text-red-700 space-y-1">
+                        <p>results_final_FINAL.pdf</p>
+                        <p>fig_from_collaborator.png</p>
+                        <p>plot_v3_fixed_NEW.eps</p>
+                        <p>screenshot_2024.png</p>
+                        <p>untitled-3.pdf</p>
+                    </div>
+                </div>
+                <div class="bg-green-50 border border-green-200 rounded-xl p-6">
+                    <h3 class="font-bold text-green-800 mb-3">✅ What Journals Want</h3>
+                    <div class="font-mono text-sm text-green-700 space-y-1">
+                        <p>Fig1.pdf</p>
+                        <p>Fig2.png</p>
+                        <p>Fig3.eps</p>
+                        <p>Fig4.png</p>
+                        <p>Fig5.pdf</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Two Tools, One App</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center text-3xl mb-6">📊</div>
+                    <h3 class="text-2xl font-bold mb-4">Figure Organizer</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start gap-3">
+                            <span class="text-purple-500 mt-1">✓</span>
+                            <span>Parses your .tex file to find all <code class="bg-gray-100 px-1 rounded">\includegraphics</code> commands</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-purple-500 mt-1">✓</span>
+                            <span>Renames figures to match appearance order (Fig1, Fig2...)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-purple-500 mt-1">✓</span>
+                            <span>Handles multi-panel figures (Fig3-a, Fig3-b, Fig3-c)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-purple-500 mt-1">✓</span>
+                            <span>Generates updated .tex with new paths</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-purple-500 mt-1">✓</span>
+                            <span>Exports renamed figures as a ready-to-submit ZIP</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-3xl mb-6">📚</div>
+                    <h3 class="text-2xl font-bold mb-4">BibTeX Formatter</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-500 mt-1">✓</span>
+                            <span>Abbreviates author names (John Smith → J. Smith)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-500 mt-1">✓</span>
+                            <span>Abbreviates journal names to standard forms</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-500 mt-1">✓</span>
+                            <span>Handles special characters and LaTeX accents</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-500 mt-1">✓</span>
+                            <span>Works with .bib and .bbl files</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-blue-500 mt-1">✓</span>
+                            <span>Preserves all other BibTeX fields</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-24 border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div>
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-2xl mb-6">🔒</div>
+                    <h3 class="text-xl font-bold mb-3">100% Offline & Private</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Your manuscripts and data never leave your Mac. No cloud uploads, no telemetry, no accounts. Everything processes locally.
+                    </p>
+                </div>
+                <div>
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-2xl mb-6">⚡</div>
+                    <h3 class="text-xl font-bold mb-3">Drag & Drop Simple</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Drop your .tex file, see the preview, drop your figures folder, download the ZIP. No command line. No learning curve.
+                    </p>
+                </div>
+                <div>
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-2xl mb-6">💸</div>
+                    <h3 class="text-xl font-bold mb-3">Free & Indie</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Built by a researcher, for researchers. I was tired of doing this manually before every submission. Now you don't have to either.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="bg-yellow-50 border border-yellow-200 rounded-2xl p-8">
+                <h3 class="text-xl font-bold text-yellow-800 mb-4">⚠️ Getting the "App is Damaged" Error?</h3>
+                <p class="text-yellow-700 mb-4">
+                    Don't worry, the app isn't broken! Since I'm an indie developer and don't pay Apple $99/year for a certificate, macOS Gatekeeper flags the app as "unsigned."
+                </p>
+                <p class="font-semibold text-gray-900 mb-2">How to authorize it in 10 seconds:</p>
+                <ol class="list-decimal list-inside space-y-2 text-gray-700 bg-white p-4 rounded-lg border border-yellow-100">
+                    <li>Open your <strong>Terminal</strong> app.</li>
+                    <li>Paste this command: <code class="bg-gray-100 px-2 py-1 rounded text-sm select-all">xattr -cr "/Applications/LaTeX & BibTeX Tools.app"</code></li>
+                    <li>Hit <strong>Enter</strong>. That's it!</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-purple-900 text-white">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to simplify your next submission?</h2>
+            <p class="text-purple-200 mb-8">Stop renaming files manually. Let the app do it in seconds.</p>
+            <a href="https://ko-fi.com/s/3ccc0c085c" class="inline-block px-8 py-4 bg-white text-purple-900 font-bold rounded-xl text-lg hover:bg-gray-100 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                Download for Free
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-gray-500 text-sm">
+        <p>© 2025 Oguz Umut Salman. Built with Electron.</p>
+        <div class="mt-4 space-x-4">
+            <a href="https://ko-fi.com/s/3ccc0c085c" class="hover:text-gray-900 underline">Ko-fi Shop</a>
+            <a href="mailto:oguzumut.salman@cnrs.fr" class="hover:text-gray-900 underline">Contact</a>
+        </div>
+    </footer>
+
+</body>
+</html>
